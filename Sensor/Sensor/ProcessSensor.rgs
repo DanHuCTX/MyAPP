@@ -1,0 +1,17 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {AE1CCDC5-030D-450B-8FF1-2CF5D53CEB17} = s 'ProcessSensor Class'
+		{
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{BF05D55C-E413-47F4-B1C5-65DA2D4111DF}'
+			Version = s '1.0'
+		}
+	}
+}

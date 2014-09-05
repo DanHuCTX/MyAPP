@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.danhu.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.danhu.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.danhu.com/Imports">
+      <xsd:import schemaLocation="http://channeldanhu.cloudapp.net/ChannelServer.svc?xsd=xsd0" namespace="http://www.danhu.com" />
+      <xsd:import schemaLocation="http://channeldanhu.cloudapp.net/ChannelServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://channeldanhu.cloudapp.net/ChannelServer.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ChannelServer_Echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Echo" />
+  </wsdl:message>
+  <wsdl:message name="ChannelServer_Echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadEvent">
+    <wsdl:part name="parameters" element="tns:UploadEvent" />
+  </wsdl:message>
+  <wsdl:message name="UploadEvent_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="Type" element="tns:Type" />
+  </wsdl:message>
+  <wsdl:portType name="ChannelServer">
+    <wsdl:operation name="Echo">
+      <wsdl:input wsaw:Action="http://www.danhu.com/ChannelServer/Echo" message="tns:ChannelServer_Echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.danhu.com/ChannelServer/EchoResponse" message="tns:ChannelServer_Echo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <wsdl:input wsaw:Action="http://www.danhu.com/ChannelServer/Upload" name="UploadEvent" message="tns:UploadEvent" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

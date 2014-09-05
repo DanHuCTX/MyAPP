@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="775626c1-580a-4202-85ae-7d76bdfd7635" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>true</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://channeldanhu.cloudapp.net/ChannelServer.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ChannelServer.xsd" MetadataType="Schema" ID="af40a75f-e14c-4a13-9f1e-da08e0a62d8f" SourceId="1" SourceUrl="http://channeldanhu.cloudapp.net/ChannelServer.svc?xsd=xsd2" />
+    <MetadataFile FileName="ChannelServer1.xsd" MetadataType="Schema" ID="31e8aa58-a437-46fa-b423-07274710286d" SourceId="1" SourceUrl="http://channeldanhu.cloudapp.net/ChannelServer.svc?xsd=xsd1" />
+    <MetadataFile FileName="ChannelServer.wsdl" MetadataType="Wsdl" ID="eaadb9a0-3735-4c0e-8a2b-13fcbd35db53" SourceId="1" SourceUrl="http://channeldanhu.cloudapp.net/ChannelServer.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ChannelServer1.wsdl" MetadataType="Wsdl" ID="79eb360d-e4dd-4c99-96bf-c93b09a87c69" SourceId="1" SourceUrl="http://channeldanhu.cloudapp.net/ChannelServer.svc?wsdl" />
+    <MetadataFile FileName="ChannelServer.disco" MetadataType="Disco" ID="c7788c33-a09b-429d-87a9-bfccf40c707e" SourceId="1" SourceUrl="http://channeldanhu.cloudapp.net/ChannelServer.svc?disco" />
+    <MetadataFile FileName="ChannelServer2.xsd" MetadataType="Schema" ID="a4aa5075-94cc-4ba0-aa28-1dddee98619c" SourceId="1" SourceUrl="http://channeldanhu.cloudapp.net/ChannelServer.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

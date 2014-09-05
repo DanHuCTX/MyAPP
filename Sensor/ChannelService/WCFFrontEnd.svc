@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ChannelService.Service1" CodeBehind="WCFFrontEnd.svc.cs" %>

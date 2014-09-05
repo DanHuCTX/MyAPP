@@ -1,0 +1,36 @@
+// Sensor.idl : IDL source for Sensor
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Sensor.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(86C268DE-A3EC-4C77-9C5A-87B199310D21),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IProcessSensor : IDispatch{
+	[id(1), helpstring("Register a process with its ID")] HRESULT RegisterProcess(LONG ProcessID);
+	[id(2), helpstring("UnRegister a process with its ID")] HRESULT UnregisterProcess(LONG ProcessID);
+};
+[
+	uuid(BF05D55C-E413-47F4-B1C5-65DA2D4111DF),
+	version(1.0),
+]
+library SensorLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(AE1CCDC5-030D-450B-8FF1-2CF5D53CEB17)		
+	]
+	coclass ProcessSensor
+	{
+		[default] interface IProcessSensor;
+	};
+};
+
